@@ -17,11 +17,7 @@ position = Vector2(497, 269.5)
 shape = SubResource("RectangleShape2D_rml5n")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qgw4m")]
-<<<<<<< HEAD
-position = Vector2(231, 417)
-=======
 position = Vector2(241, 561)
->>>>>>> 18d5367bd33a8f0daf7ad792b7540a6231394322
 
 [node name="Plataforma" parent="." instance=ExtResource("2_622qf")]
 position = Vector2(275, 446)

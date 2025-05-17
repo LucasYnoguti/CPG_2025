@@ -16,6 +16,7 @@ var forca_pulo_atual = 0
 var aumentando_pulo = true
 
 func movimentacao():
+<<<<<<< HEAD
 	if escalando:
 		direcao = Input.get_vector("andar_esquerda", "andar_direita", "escalar_cima", "escalar_baixo")
 	elif not escalando and not pulando:
@@ -26,6 +27,22 @@ func movimentacao():
 		olhando_direita = true
 	elif direcao.x < 0:
 		olhando_direita = false
+=======
+	if escalando: # Movimentacao eixo y habilitado
+		direcao = Input.get_vector(
+		"andar_esquerda", "andar_direita", "escalar_cima", "escalar_baixo")
+	elif escalando == false and pulando == false: # Movimentacao com eixo y "desabilitado"
+		direcao = Input.get_vector(
+		"andar_esquerda", "andar_direita", "", "")
+	
+func animacao():
+	if escalando:
+		$AnimationPlayer.play("escalando")
+	if direcao.x == 1 and escalando == false and is_on_floor():
+		$AnimationPlayer.play("andando_direita")
+	if direcao.x == -1 and escalando == false and is_on_floor():
+		$AnimationPlayer.play("andando_esquerda")
+>>>>>>> 18d5367bd33a8f0daf7ad792b7540a6231394322
 
 func _physics_process(delta: float) -> void:
 	movimentacao()
@@ -40,6 +57,7 @@ func _physics_process(delta: float) -> void:
 	if escalando:
 		velocity.y = direcao.y * velocidade_movimento
 	else:
+<<<<<<< HEAD
 		velocity.y += gravidade * delta
 
 		# Início do carregamento
@@ -69,6 +87,18 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and not carregando_pulo:
 		pulando = false
 
+=======
+		velocity.y += gravidade * delta # Gravidade é aplicada se nao esta escalando
+	
+	animacao()
+	if Input.is_action_pressed("pular"):
+		pulando = true
+		print("pulando")
+	if Input.is_action_just_released("pular") and is_on_floor():
+		velocity.y += forca_do_pulo
+		pulando = false
+		
+>>>>>>> 18d5367bd33a8f0daf7ad792b7540a6231394322
 	move_and_slide()
 
 func _carregar_pulo(delta: float):
