@@ -18,8 +18,6 @@ shape = SubResource("RectangleShape2D_rml5n")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qgw4m")]
 position = Vector2(231, 417)
-gravidade = null
-forca_do_pulo = null
 
 [node name="Plataforma" parent="." instance=ExtResource("2_622qf")]
 position = Vector2(275, 446)

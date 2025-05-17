@@ -12,9 +12,8 @@ size = Vector2(128.5, 127)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(69, 145)
 script = ExtResource("1_u0opb")
-velocidade_movimento = 100.0
-gravidade = null
-forca_do_pulo = null
+velocidade_movimento = 200.0
+velocidade_carga_pulo = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -66)
