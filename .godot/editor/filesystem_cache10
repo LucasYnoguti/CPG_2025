@@ -1,4 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747450404
-icon.svg::CompressedTexture2D::730616242458968452::1747450395::1747450405::1::::<><><>0<>0<>d8545f45a3befb9dd96c9a335a246bc3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1747446702::0::1::::<><><>0<>0<><>::
+::res://::1747458924
+icon.svg::CompressedTexture2D/CompressedTexture2D::6464316301611005872::1747451717::1747451729::1::::<><><>0<>0<>361cbc47418bece5c64eba17e06fa025<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+mapa.gd::GDScript::5218028568693042336::1747455773::0::1::::<>Node2D<><>0<>0<><>::
+Mapa.tscn::PackedScene::2516038349082322332::1747458807::0::1::::<><><>0<>0<><>::uid://cglwfynqc3a0o::::res://mapa.gd<>uid://b78q84a2cngrq::::res://Personagem.tscn<>uid://d2o0ivfpk5hlf::::res://plataforma.tscn
+Personagem.gd::GDScript::6730753610887276878::1747458789::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Personagem.tscn::PackedScene::4701620073484336722::1747458808::0::1::::<><><>0<>0<><>::uid://cydmly4of5grw::::res://icon.svg<>uid://c25or8b60ax7c::::res://Personagem.gd
+plataforma.tscn::PackedScene::9084795440443872583::1747458809::0::1::::<><><>0<>0<><>::uid://cydmly4of5grw::::res://icon.svg

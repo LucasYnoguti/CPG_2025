@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b78q84a2cngrq"]
+
+[ext_resource type="Texture2D" uid="uid://cydmly4of5grw" path="res://icon.svg" id="1_6mdyt"]
+[ext_resource type="Script" uid="uid://c25or8b60ax7c" path="res://Personagem.gd" id="1_u0opb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0rq2"]
+size = Vector2(132.5, 130.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0opb"]
+size = Vector2(128.5, 127)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(69, 145)
+script = ExtResource("1_u0opb")
+velocidade_movimento = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -66)
+texture = ExtResource("1_6mdyt")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="ColisaoEscalada" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.25, -64.75)
+shape = SubResource("RectangleShape2D_y0rq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.75, -65.5)
+shape = SubResource("RectangleShape2D_u0opb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
