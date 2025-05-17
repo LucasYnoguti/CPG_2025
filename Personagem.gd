@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var gravidade = 500
 @export var forca_do_pulo = -300 
 
+
+
 var escalando = false
 var pulando = false # Vai funcionar para ele nao poder se movimentar durante o pulo
 var direcao = Vector2(0, 0)
