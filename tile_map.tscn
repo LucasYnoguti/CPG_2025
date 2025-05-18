@@ -1,0 +1,139 @@
+[gd_scene load_steps=14 format=3 uid="uid://dtcegb8qrys1d"]
+
+[ext_resource type="Texture2D" uid="uid://ctr2fxwud6fda" path="res://tyleset.png" id="1_7yhko"]
+[ext_resource type="Texture2D" uid="uid://bxe8vtk4jpcgg" path="res://montanha.png" id="2_1n30v"]
+[ext_resource type="Texture2D" uid="uid://omqf5pqubnij" path="res://plataforma.png" id="3_35kre"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35kre"]
+texture = ExtResource("1_7yhko")
+texture_region_size = Vector2i(32, 32)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 16, 16, -16)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, -16, 16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 16, -16, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, -16, -16, -16)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, -16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, 16, 16, 16, -16, -16, -16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+
+[sub_resource type="TileSet" id="TileSet_1n30v"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_35kre")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03na7"]
+texture = ExtResource("1_7yhko")
+texture_region_size = Vector2i(32, 32)
+0:5/0 = 0
+1:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+1:7/0 = 0
+0:7/0 = 0
+0:6/0 = 0
+2:5/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_anah5"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_03na7")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xftlc"]
+texture = ExtResource("1_7yhko")
+texture_region_size = Vector2i(32, 32)
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2cfip"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "escalavel"
+custom_data_layer_0/type = 1
+sources/1 = SubResource("TileSetAtlasSource_xftlc")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n30v"]
+texture = ExtResource("2_1n30v")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSet" id="TileSet_qtlnl"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_1n30v")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_anah5"]
+texture = ExtResource("3_35kre")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_sqirv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_anah5")
+
+[node name="TileMap" type="Node2D"]
+
+[node name="Plataforma" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_1n30v")
+
+[node name="Frente" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_anah5")
+
+[node name="Pedra" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0)
+tile_set = SubResource("TileSet_2cfip")
+
+[node name="Montanha" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_qtlnl")
+
+[node name="plat" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_sqirv")

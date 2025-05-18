@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3us8eqi1v4u0"]
+
+[ext_resource type="AudioStream" uid="uid://c3j7skq7s0x37" path="res://SFX/musicalidade.mp3" id="1_u4ygf"]
+
+[node name="musica" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_u4ygf")
+autoplay = true
+bus = &"music"

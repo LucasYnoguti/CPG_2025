@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy65uib157ufa"]
+
+[ext_resource type="Texture2D" uid="uid://g1yjf6cseksu" path="res://Bola_Neve_Anim.png" id="1_7016l"]
+[ext_resource type="Script" uid="uid://brivojegmqdc" path="res://bola_de_neve.gd" id="1_dp84e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7016l"]
+radius = 8.06226
+
+[sub_resource type="Animation" id="Animation_7016l"]
+resource_name = "bola_neve"
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_dp84e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cl178"]
+_data = {
+&"RESET": SubResource("Animation_dp84e"),
+&"bola_neve": SubResource("Animation_7016l")
+}
+
+[node name="bola_de_neve" type="RigidBody2D"]
+gravity_scale = 0.2
+script = ExtResource("1_dp84e")
+
+[node name="bola_de_neve" type="Area2D" parent="."]
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bola_de_neve"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_7016l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
+texture = ExtResource("1_7016l")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cl178")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="bola_de_neve" to="." method="_on_area_2d_area_entered"]
